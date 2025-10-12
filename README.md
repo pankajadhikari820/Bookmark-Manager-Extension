@@ -161,7 +161,7 @@ You are free to use, modify, and distribute this project with proper credit.
 ## 📬 Contact / Support
 
 **Developer:** [Pankaj Adhikari](mailto:pankajadhikari820@gmail.com)
-**GitHub Issues:** [Open a new issue] (https://github.com/pankajadhikari820/Bookmark-Manager-Extension/issues)
+**GitHub Issues:** [Open a new issue] https://github.com/pankajadhikari820/Bookmark-Manager-Extension/issues
 
 
 ---
