@@ -114,7 +114,7 @@ git push -u origin main
 ### Chrome Web Store
 
 1. Go to [Chrome Web Store Developer Dashboard](https://chrome.google.com/webstore/devconsole).
-2. Create a developer account (one-time $5).
+2. Create a developer account.
 3. Zip your extension folder.
 4. Upload → Add description, screenshots, and publish.
 
@@ -161,7 +161,8 @@ You are free to use, modify, and distribute this project with proper credit.
 ## 📬 Contact / Support
 
 **Developer:** [Pankaj Adhikari](mailto:pankajadhikari820@gmail.com)
-**GitHub Issues:** [Open a new issue](https://github.com/<your-username>/bookmark-manager-extension/issues)
+**GitHub Issues:** [Open a new issue] (https://github.com/pankajadhikari820/Bookmark-Manager-Extension/issues)
+
 
 ---
 
