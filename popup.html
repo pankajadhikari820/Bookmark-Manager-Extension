@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Bookmark Manager</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <header>
+        <h1>Bookmark Manager</h1>
+    </header>
+    <main>
+
+        <!-- moved search + view toggle to top -->
+        <div class="bm-controls" style="margin-bottom:12px;">
+            <input type="search" id="search" placeholder="Search (by title, url, tags)..." >
+        </div>
+        <div class="bm-controls" style="margin-bottom:12px;">
+            <input type="file" id="import-file" accept=".html,.htm" style="display:none;">
+            <button type="button" id="import-btn" title="Import bookmarks from HTML"  >Import</button> 
+            <button type="button" id="export-btn" title="Export bookmarks to HTML">Export</button>
+
+        </div>
+
+  
+
+
+        <section id="add-bookmark">
+            <h2>Add Bookmark</h2>
+            <form id="bookmark-form">
+                <div>
+                    <input type="text" id="bookmark-title" placeholder="Bookmark Title" required>
+                </div>
+                <div>
+                    <input type="url" id="bookmark-url" placeholder="Bookmark URL" required>
+                      <button type="button" id="use-current-btn">Use current page URL</button>
+                </div>
+                <div>
+                    <textarea id="bookmark-desc" placeholder="Description (optional)" rows="2"></textarea>
+                </div>
+                <div>
+                    <input type="text" id="bookmark-tags" placeholder="Tags (comma separated, optional)">
+                </div>
+                <div class="folder-group">
+                    <label for="bookmark-folder"><h2>Folder:</h2></label>
+                    <select id="bookmark-folder" ></select>
+                    <input type="text" id="new-folder" placeholder="New folder name">
+                    <button type="button" id="add-folder-btn">Add Folder</button>
+                </div>
+                <div style="margin-top:8px;">
+                  
+                    <button type="submit" id="submit-btn">Add Bookmark</button>
+                    <button type="button" id="cancel-edit-btn" style="display:none; margin-left:8px;">Cancel</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Folder management: create / rename / delete + drop target -->
+        <section id="folders" style="margin-top:12px;">
+            <h2>Folders</h2>
+            <div id="folder-list" style="display:flex; gap:8px; flex-wrap:wrap;">
+                <!-- folder pills will be added here; they are drop targets -->
+            </div>
+            <small style="display:block; margin-top:6px; color:#666;">
+                Drag a bookmark onto a folder to move it. Rename or delete folders (bookmarks moved to Uncategorized).
+            </small>
+        </section>
+
+        <section id="bookmarks" style="margin-top:12px;">
+            <h2>Your Bookmarks</h2>
+ <!-- bulk selection + delete -->
+            <div class="view-toggle" role="tablist" aria-label="View toggle" style="margin-left:auto;">
+                <button type="button" id="list-view-btn" aria-pressed="true">List View</button>
+                <button type="button" id="grid-view-btn" aria-pressed="false">Grid View</button>
+            </div>
+            <label style="margin-left:8px; display:flex; align-items:center;">
+                <input type="checkbox" id="select-all" title="Select all" />
+                <span style="margin-left:6px; font-size:1em;">Select all</span>
+            </label>
+            
+            <button type="button" id="delete-selected-btn" style="margin-left:8px;">Delete selected</button>
+            <ul id="bookmark-list" class="list-view" aria-live="polite">
+                <!-- Bookmarks will be dynamically added here -->
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Bookmark Manager By Tech Beginner</p>
+    </footer>
+
+    <script src="popup.js"></script>
+</body>
+</html>

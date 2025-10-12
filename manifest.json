@@ -1,0 +1,18 @@
+
+{
+  "manifest_version": 3,
+  "name": "Bookmark Manager Extension",
+  "version": "1.0",
+  "description": "Simple bookmark manager (popup)",
+  "action": {
+    "default_title": "Bookmark Manager",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "storage",
+    "tabs"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
