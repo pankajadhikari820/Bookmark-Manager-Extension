@@ -1,8 +1,3 @@
-Perfect bhai 🔥
-Ab tu **LICENSE file** bhi add kar raha hai, to chalo uske hisaab se updated **final README.md** file dekh le —
-ye completely ready hai GitHub upload ke liye 👇
-
----
 
 # 🧭 Bookmark Manager Extension
 
